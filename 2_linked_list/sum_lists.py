@@ -13,6 +13,7 @@
 
 from linked_list import LinkedList, Node
 
+
 def sum_lists(l1: LinkedList, l2: LinkedList) -> LinkedList:
     current1 = l1.head
     current2 = l2.head
@@ -36,12 +37,12 @@ def sum_lists(l1: LinkedList, l2: LinkedList) -> LinkedList:
 
 l1 = LinkedList([7, 1, 6])
 l2 = LinkedList([5, 9, 2])
-print(sum_lists(l1, l2))  # 2 -> 1 -> 9
+print(sum_lists(l1, l2))
 
 l1 = LinkedList([6, 1, 7])
 l2 = LinkedList([2, 9, 5])
-print(sum_lists(l1, l2))  # 8 -> 0 -> 3 -> 1
+print(sum_lists(l1, l2))
 
 l1 = LinkedList([6, 1, 7])
 l2 = LinkedList([2, 9, 5, 1])
-print(sum_lists(l1, l2))  # 8 -> 0 -> 3 -> 2
+print(sum_lists(l1, l2))
