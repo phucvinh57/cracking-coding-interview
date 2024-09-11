@@ -12,6 +12,14 @@ class LinkedList:
             for data in arr:
                 self.append(data)
 
+    def append_node(self, node: Node):
+        if self.head is None:
+            self.head = node
+            self.tail = node
+            return
+        self.tail.next = node
+        self.tail = node
+
     def append(self, data):
         new_node = Node(data)
         if self.head is None:
