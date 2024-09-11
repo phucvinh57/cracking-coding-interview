@@ -9,22 +9,21 @@
 from linked_list import LinkedList, Node
 
 
-def partition(linked_list: LinkedList, p: int) -> LinkedList:
-    current = linked_list.head
-
+def partition(linked_list: LinkedList, p: int) -> Node:
     left = LinkedList()
     right = LinkedList()
 
+    current = linked_list.head
     while current:
-        if current.data < p:
-            left.append(current.data)
+        if current.val < p:
+            left.push(current.val)
         else:
-            right.append(current.data)
+            right.push(current.val)
         current = current.next
-
-    left.tail.next = right.head
-    return left
-
+    
+    if left.tail:
+        left.tail.next = right.head
+    return left.head if left.head else right.head
 
 print(
     partition(LinkedList([3, 5, 8, 6, 10, 2, 1]), 5)
